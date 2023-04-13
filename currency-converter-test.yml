@@ -3,7 +3,7 @@ api:
   url: "https://api.apilayer.com/exchangerates_data/convert"
 
 server:
-  port: 7777
+  port: '{cipher}ce4b1276fdbcca50068bf70abaeb92f3d26650bb80946dee7729078b7a6d3c88'
 
 spring:
   datasource:
