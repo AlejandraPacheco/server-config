@@ -1,6 +1,6 @@
 api:
-  key: ${API_KEY:v4uy0dBrehQBvz7fDuf7bpw44AUxkfHU}
-  url: "https://api.apilayer.com/exchangerates_data/convert"
+  key: '{cipher}71c75a3fcf32995f84953720c189249164b9966ff172ec0d205dabc4f89abdeb39b9ada82be25c31b9c634d5aa309a1b7f81e75b2ad6214813bf8c5f88d0d980a'
+  url: '{cipher}2f6a2ec7a07b199f78ba3a740d1cf1842939292027396f3544749466d9ff4040b988b50c161afed1208209945481dbc10f17fc9d89bf3e4ce185f9dc153dce6f6fc88572f9c7cc602323633eed476958'
 
 server:
   port: '{cipher}ce4b1276fdbcca50068bf70abaeb92f3d26650bb80946dee7729078b7a6d3c88'
@@ -8,9 +8,9 @@ server:
 spring:
   datasource:
     type: org.postgresql.jdbc2.optional.SimpleDataSource
-    username: ${USERNAME:postgres}
-    password: ${PASSWORD:mysecretpassword}
-    url: ${URL:jdbc:postgresql://localhost:5432/software}
+    username: '{cipher}d2e18afca51245f52c333a766a5a3bb813c4d8469039fe21c440118dd2b792c8'
+    password: '{cipher}536138e45545673a80637130fbc2d898baaed29f1ec1322e0bd5e01e4172e3acaa08a7cc65b7766078e60bc1c1303755'
+    url: '{cipher}223b6ca90e5fabfb9b20b6ebdf3a6e7cb97ad6a40855a854acb0385b64dd2fabed278659bce18983f97fc2d0339cb9442e92ccd13352da64dde8dac50a108e59'
   jpa:
     hibernate:
       ddl-auto: update
@@ -23,7 +23,7 @@ keycloak:
   realm: software
   resource: backend
   credentials:
-    secret: 48PhN2WDKRDfifzCBYVloEH7GnaefCcF
+    secret: '{cipher}574e942390aa3eb01e692e7c6233022265095f4ca1df91dc04299c5d05ecb266c70850df8fe52d5d98c090443d1632308c6790f58861acfe75334b9399ad5f7d'
   ssl-required: none
   use-resource-role-mappings: false
   security-constraints:
