@@ -1,0 +1,51 @@
+api:
+  key: ${API_KEY:v4uy0dBrehQBvz7fDuf7bpw44AUxkfHU}
+  url: "https://api.apilayer.com/exchangerates_data/convert"
+
+server:
+  port: 8008
+
+spring:
+  datasource:
+    type: org.postgresql.jdbc2.optional.SimpleDataSource
+    username: ${USERNAME:postgres}
+    password: ${PASSWORD:mysecretpassword}
+    url: ${URL:jdbc:postgresql://localhost:5432/software}
+  jpa:
+    hibernate:
+      ddl-auto: update
+  application:
+    name: currency-converter
+
+keycloak:
+  auth-server-url: http://172.18.18.134:8080
+  autodetect-bearer-only: true
+  realm: software
+  resource: backend
+  credentials:
+    secret: 48PhN2WDKRDfifzCBYVloEH7GnaefCcF
+  ssl-required: none
+  use-resource-role-mappings: false
+  security-constraints:
+    - authRoles:
+        - ADMIN
+      securityCollections:
+        - name: SERVICIOS DE ADMINISTRADOR
+          omitted-methods:
+            - OPTIONS
+          patterns:
+            - /api/currency/paginas
+    - authRoles:
+        - USER
+      securityCollections:
+        - name: SERVICIOS DE USUARIO
+          omitted-methods:
+            - OPTIONS
+          patterns:
+            - /api/currency/exchange
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" # Actuator
